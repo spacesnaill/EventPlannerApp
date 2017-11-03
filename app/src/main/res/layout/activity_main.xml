@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="webdev.android.eventplanner.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/username"
+            android:layout_alignEnd="@+id/username"
+            android:layout_alignStart="@+id/username"
+            android:layout_marginBottom="80dp"
+            android:text="Sign Up"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            tools:text="Sign Up" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/username"
+            android:layout_alignStart="@+id/username"
+            android:layout_marginBottom="60dp"
+            android:ems="10"
+            android:hint="Enter your email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/username"
+            android:layout_marginBottom="249dp"
+            android:ems="10"
+            android:hint="Enter a password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp"
+            android:ems="10"
+            android:hint="Enter a username"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="170dp"
+            android:onClick="signUp"
+            android:text="Sign Up" />
+
+        <TextView
+            android:id="@+id/LoginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/signUp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="89dp"
+            android:text="Already have an Account?"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="Event Planner" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

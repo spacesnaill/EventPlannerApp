@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="webdev.android.eventplanner.createEvent">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteX="-27dp"
+        tools:layout_editor_absoluteY="-131dp">
+
+        <RelativeLayout
+            android:layout_width="364dp"
+            android:layout_height="908dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="7dp"
+            android:isScrollContainer="true"
+            android:scrollbars="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/eventSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="submitEvent"
+                android:text="Submit"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+                tools:layout_editor_absoluteX="169dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:id="@+id/eventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:hint="Title"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/eventDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/eventTitle"
+                android:layout_below="@+id/eventTitle"
+                android:layout_marginTop="47dp"
+                android:ems="10"
+                android:hint="Description"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/eventAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/eventDesc"
+                android:layout_below="@+id/eventDesc"
+                android:layout_marginTop="45dp"
+                android:ems="10"
+                android:hint="Street Address"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/eventZip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/eventAddress"
+                android:layout_below="@+id/eventAddress"
+                android:layout_marginTop="49dp"
+                android:ems="10"
+                android:hint="Postal Code"
+                android:inputType="textPostalAddress" />
+
+            <EditText
+                android:id="@+id/eventCity"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/eventZip"
+                android:layout_below="@+id/eventZip"
+                android:layout_marginTop="46dp"
+                android:ems="10"
+                android:hint="City"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/eventCountry"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/eventCity"
+                android:layout_toEndOf="@+id/eventCity"
+                android:ems="10"
+                android:hint="Country"
+                android:inputType="textPersonName" />
+
+            <DatePicker
+                android:id="@+id/eventDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:visibility="invisible" />
+
+            <TimePicker
+                android:id="@+id/eventTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp" />
+
+            <Button
+                android:id="@+id/continueButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="continueButtonPress"
+                android:text="Continue"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/eventDate" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="backButtonPress"
+                android:text="Back"
+                android:visibility="invisible"
+                android:layout_below="@+id/eventDate"
+                android:layout_alignStart="@+id/eventDate" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="webdev.android.eventplanner.ViewEvent">
+
+    <ScrollView
+        android:layout_width="359dp"
+        android:layout_height="490dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="63dp">
+
+            <LinearLayout
+                android:layout_width="341dp"
+                android:layout_height="55dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                tools:layout_editor_absoluteX="12dp"
+                tools:layout_editor_absoluteY="309dp">
+
+                <Button
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.29"
+                    android:onClick="editEvent"
+                    android:text="Edit"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/rsvpButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="addRSVP"
+                    android:text="RSVP" />
+
+                <Button
+                    android:id="@+id/Map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="goToMapActivity"
+                    android:text="Map" />
+
+                <Button
+                    android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.14"
+                    android:onClick="deleteEvent"
+                    android:text="Delete"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="364dp"
+                android:layout_height="294dp"
+                android:orientation="vertical"
+                android:weightSum="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="8dp">
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.37"
+                    android:text="Description:" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.12"
+                    android:text="Where:" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.09"
+                    android:text="Date:" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.08"
+                    android:text="Time:" />
+
+                <TextView
+                    android:id="@+id/rsvp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:text="RSVPs:" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
